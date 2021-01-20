@@ -1,0 +1,162 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    {% block title %}
+        <title>Define</title>
+    {% endblock title %}
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+
+    <!-- Favicons -->
+    <link href="{% static '/images/icon.png' %}" rel="icon">
+
+    <!-- Google Fonts Link -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+
+    <!-- Google Icons Link -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- Animations and JS Link-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+{% block header %}
+
+    <!-- Header -->
+    <header id="header" class="fixed-top ">
+        <div id="container" class="container d-flex align-items-center justify-content-between">
+
+            <a href="base.html" class="logo"><img src="{% static '/images/logo.png' %}" alt="Logo"
+                                                  class="img-fluid"></a>
+            <nav id="navigate" class="nav-menu ">
+                <ul>
+                    <li><a href="/home/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li class="active"><a href="/define/">Define</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                </ul>
+            </nav><!-- nav-menu -->
+        </div>
+    </header><!-- End Header -->
+
+{% endblock header %}
+
+
+<main id="main">
+
+    {% block breadcrumps %}
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Define</h2>
+                    <ol>
+                        <li><a href="base.html">Home</a></li>
+                        <li>Define</li>
+                    </ol>
+                </div>
+            </div>
+        </section><!-- End Breadcrumbs -->
+    {% endblock breadcrumps %}
+
+    {% block content %}
+
+        <section class="define-page">
+            <div class="container">
+                <div class="row">
+
+                    {% for word in words %}
+                        <div class="card col-lg-4 mt-4 mr-2" style="width: 16rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ word.word }}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">{{ word.category }}</h6>
+                                <p class="card-text">dowloads:{{ word.downloads }}</p>
+                                <span class="card-text">Pegi: {{ word.pegi }}</span>
+                                <span class="card-text">Ranking: {{ word.ranking }}</span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    <div class="pagination">
+    <span class="step-links">
+        {% if words.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ words.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ words.number }} of {{ words.paginator.num_pages }}.
+        </span>
+
+        {% if words.has_next %}
+            <a href="?page={{ words.next_page_number }}">next</a>
+            <a href="?page={{ words.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    {% endblock content %}
+
+</main><!-- End #main -->
+
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="container">
+        <div class="footer-info">
+            <img src="{% static '/images/logo.png' %}" alt="" width="150px">
+            <p>
+                Rumelihisarı Mah. <br>
+                Pırlanta Sk. 9/1 <br>
+                Sarıyer/İstanbul <br>
+                <strong>Phone:</strong> +90 543 455 20 48<br>
+                <strong>Email:</strong> semihcan4kilic4@gmail.com<br>
+            </p>
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+<a id="button"></a>
+<div id="preloader" class="loader">
+    <img src="{% static '/images/icon.png' %}" alt="loadericon">
+</div>
+
+<!-- AOS animations -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init();
+</script>
+
+<!-- Template Main JS File -->
+<script src="{% static '/js/main.js' %}"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+
+</body>
+
+</html>

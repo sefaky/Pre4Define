@@ -1,0 +1,189 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Pre4Define</title>
+
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+
+
+     <!-- Favicons -->
+  <link href="{% static '/images/icon.png' %}" rel="icon">
+
+   <!-- Google Fonts Link -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+  <!-- Google Icons Link -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+ <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+ <!-- Template Main CSS File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- Animations and JS Link-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+
+
+</head>
+<body>
+ <!-- Header -->
+  <header id="header" class="fixed-top ">
+    <div id="container" class="container d-flex align-items-center justify-content-between">
+
+      <a href="base.html" class="logo"><img src="{% static '/images/logo.png' %}" alt="Logo" class="img-fluid"></a>
+      <nav id="navigate" class="nav-menu ">
+        <ul>
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#define">Define</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </nav><!-- nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+ <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+          <h2>Make a better start.</h2>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main"><!--  #main -->
+       <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="{% static '/images/about.jpg' %}" class="img-fluid" alt="about_image">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+              <br>
+              <br>
+              <h3>We are Pre4Define!</h3>
+            <p>
+              We are 4 students from Bogazici University. One of our team members is a game developer who is publishing games
+              on Google Play Store and one of the obstacles he came across is picking the color palette and what should be the
+              theme of the game. So we came up with the idea of making a program to give suggestions to developers who have the
+              same problem with our friend. After using our app, none of the developers will have a hard time picking the color
+              theme on their game or selecting the true words for better attraction.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+      <!-- ======= Define Section ======= -->
+    <section id="define" class="define">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="text-center">
+          <a class="define-btn" href="/define/">Define</a>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+
+       <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Our Team</h2>
+
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-info">
+                <h4>Semih Can Kılıç</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="200">
+              <div class="member-info">
+                <h4>Sefa Kaya</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="300">
+              <div class="member-info">
+                <h4>Arif Göktürk Taş</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="400">
+              <div class="member-info">
+                <h4>Üsame Dilbaz</h4>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Team Section -->
+
+  </main><!-- End #main -->
+
+ <!-- ======= Footer ======= -->
+  <footer id="footer">
+      <div class="container">
+            <div class="footer-info">
+              <img src="{% static '/images/logo.png' %}" alt="Logo" width="150px">
+              <p>
+                Rumelihisarı Mah. <br>
+                Pırlanta Sk. 9/1 <br>
+                Sarıyer/İstanbul <br>
+                <strong>Phone:</strong> +90 543 455 20 48<br>
+                <strong>Email:</strong> semihcan4kilic4@gmail.com<br>
+              </p>
+            </div>
+      </div>
+  </footer><!-- End Footer -->
+
+ <a id="button"></a>
+  <div id="preloader" class="loader">
+    <img src="{% static '/images/icon.png' %}" alt="loadericon">
+  </div>
+
+
+<!-- AOS animations -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static '/js/main.js' %}"></script>
+
+
+
+</body>
+</html>
