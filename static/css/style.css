@@ -143,6 +143,46 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: #361414;
+  text-align: center;
+  text-decoration: none;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-top: 25px ;
+  min-width: 50px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #361414;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  color: #f00876;
+}
+
+.dropdown:hover .dropdown-content {
+  background-color: #ffc5511e;
+  display: block;
+}
+
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/

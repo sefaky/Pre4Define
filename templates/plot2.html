@@ -1,0 +1,66 @@
+{% extends 'define.html' %}
+{% load static %}
+{% load bootstrap %}
+
+
+{% block title %}
+  <title>Plot</title>
+    {% endblock title %}
+{% block header %}
+
+ <!-- Header -->
+  <header id="header" class="fixed-top ">
+    <div id="container" class="container d-flex align-items-center justify-content-between">
+
+      <a href="base.html" class="logo"><img src="{% static '/images/logo.png' %}" alt="Logo" class="img-fluid"></a>
+      <nav id="navigate" class="nav-menu ">
+        <ul>
+          <li><a href="/home/">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="/define/">Define</a></li>
+          <li><a href="#team">Team</a></li>
+          <li ><a href="/contact/">Contact</a></li>
+            <li><a href="/plot/">Plot</a></li>
+            <li class="active"><a href="/plot2/">PlotColors</a></li>
+        </ul>
+      </nav><!-- nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  {% endblock header %}
+
+{% block breadcrumps %}
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>PLOT</h2>
+          <ol>
+            <li><a href="base.html">Home</a></li>
+            <li>Plot</li>
+          </ol>
+        </div>
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+{% endblock breadcrumps %}
+
+{% block content %}
+    <section class="define-page">
+      <div class="container">
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~sefaky/26.embed"></iframe>
+          <iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~sefaky/28.embed"></iframe>
+          <iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~sefaky/30.embed"></iframe>
+          <iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~sefaky/32.embed"></iframe>
+          <iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~sefaky/34.embed"></iframe>
+          <iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~sefaky/36.embed"></iframe>
+          <iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~sefaky/38.embed"></iframe>
+          <iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~sefaky/41.embed"></iframe>
+
+
+      </div>
+    </section>
+{% endblock content %}
+
+

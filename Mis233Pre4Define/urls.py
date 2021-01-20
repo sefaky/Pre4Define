@@ -16,15 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from define.views import homepage
-from define.views import define
-
-
+from define.views import define, plot
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', homepage),
     path('home/', homepage),
-    path('define/', include('define.urls')),
+    path('define/', define),
     path('', include('contact.urls')),
+    path('plot/', plot),
 
 ]
